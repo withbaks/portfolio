@@ -1,0 +1,145 @@
+.infoContent {
+    margin: 60px 0;
+    margin-top: 150px;
+    padding: 0 30px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.infoContent__available {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.infoContent__available--time {
+    color: var(--grey);
+    font-size: 12px;
+    font-weight: var(--semibold);
+}
+
+.infoContent__available--header {
+    width: 100%;
+    font-size: 48px;
+    line-height: 76px;
+    letter-spacing: 1;
+}
+
+/* Section Two */
+.mobileshowcases {
+    margin-bottom: 120px;
+    width: 100%;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mobileshowcase {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.mobileshowcase img {
+    width: 290px;
+    height: auto;
+}
+
+.mobileshowcase__one {
+    background-color: var(--purple);
+}
+
+.mobileshowcase__two {
+    background-color: var(--blue);
+}
+
+.mobileshowcase__three {
+    background-color: var(--brown);
+}
+
+/* Section for showcase 1 */
+.showcase1, .showcase2 {
+    margin-bottom: 120px;
+}
+
+.showcaseText {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcaseText__header {
+    font-size: 25px;
+    font-weight: var(--medium);
+}
+
+.showcaseText__right {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.showcaseText__right--paragraph {
+    width: 450px;
+    font-size: 14px;
+    font-weight: var(--medium);
+    letter-spacing: 0.4px;
+    line-height: 21px;
+}
+
+.showcaseText__right--rectangle {
+    background-color: var(--lightGrey);
+    width: 120px;
+    height: 2px;
+}
+
+.showcaseImage1 img {
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    background-color: var(--orange);
+}
+
+.showcaseImage2 img {
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    background-color: var(--deepGreen);
+}
+
+.showcaseImageGroup {
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lightGrey);
+}
+
+.showcaseImages3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.showcaseImages3 img {
+    width: 290px;
+}
+
+.showcaseActionBtn {
+    font-size: 20px;
+    font-weight: var(--medium);
+    width: fit-content;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: var(--white);
+    border: 5px solid var(--purple);
+    border-radius: 30px;
+}

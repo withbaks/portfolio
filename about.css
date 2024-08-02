@@ -1,0 +1,368 @@
+main {
+    margin-top: 150px;
+    align-items: center;
+}
+
+section.header {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+}
+
+.pulse {
+    animation: pulse-animation 4s infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .path-animate {
+    animation: path-animation 4s ease-in-out infinite;
+  }
+
+  @keyframes path-animation {
+    0% {
+      stroke-dasharray: 0, 1000;
+    }
+    100% {
+      stroke-dasharray: 1000, 0;
+    }
+  }
+
+  .rect-animate {
+    animation: rect-animation 4s ease-in-out infinite;
+  }
+
+  @keyframes rect-animation {
+    0% {
+      fill: #fff;
+    }
+    50% {
+      fill: #9796F0;
+    }
+    100% {
+      fill: #fff;
+    }
+  }
+
+  .rect-dimension-animate {
+    animation: rect-dimension-animate 4s ease-in-out infinite;
+  }
+
+  @keyframes rect-dimension-animate {
+    0% {
+      fill: #9796F0;
+    }
+    50% {
+      fill: #fff;
+    }
+    100% {
+      fill: #9796F0;
+    }
+  }
+
+  .rect-border-animate {
+    animation: rect-border-animation 4s ease-in-out infinite;
+  }
+
+  @keyframes rect-border-animation {
+    0% {
+      stroke: #9796F0;
+    }
+    50% {
+      stroke: #fff;
+    }
+    100% {
+      stroke: #9796F0;
+    }
+  }
+
+.headerRight__texts--small {
+    color: var(--grey);
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.headerRight__texts--large {
+    color: var(--black);
+    font-size: 70px;
+    letter-spacing: 1px;
+    line-height: 90px;
+}
+
+.headerRight {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+/* Download button animation */
+/* Animation on hover */
+.download:hover .downloadRotate {
+    animation: rotateAndMove 1s ease forwards infinite;
+}
+
+.download:hover .downloadText {
+    display: none;
+}
+
+.downloadTextHover {
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--black);
+    opacity: 0;
+    transition: opacity 0.3s fade;
+}
+
+.download:hover .downloadTextHover {
+    opacity: 1;
+}
+
+
+/* Section Two */
+section.two {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.sectionTwo__left {
+    padding-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    gap: 240px;
+    flex-direction: column;
+}
+
+.sectionTwo__left p {
+    font-size: 18px;
+    font-weight: var(--medium);
+}
+
+.sectionTwo__right {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sectionTwo__right--large {
+    width: 700px;
+    font-size: 114px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.sectionTwo__right--small {
+    font-size: 54px;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+section.three {
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: var(--medium);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.four {
+    margin-bottom: 100px;
+    position: relative;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+section.four p {
+    padding-right: 20px;
+    height: 50vh;
+    overflow: scroll;
+}
+
+section.four p::-webkit-scrollbar {
+    width: 2px;
+  }
+
+section.four p span {
+    font-weight: 600;
+}
+
+.typewriter {
+    position: absolute;
+    top: 0;
+    color: var(--black);
+    /* color: var(--lightGrey); */
+    /* background-color: var(--black); */
+}
+
+section.five {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionFive__header, .scrollHeader {
+    font-size: 24px;
+    font-weight: var(--medium);
+    margin-bottom: 30px;
+}
+
+.sectionFive__cards {
+    width: 1200px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: scroll;
+}
+
+.sectionFive__cards::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+  }
+
+.cards {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.visit {
+    color: var(--black);
+    font-weight: var(--medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 22px;
+    background-color: var(--white);
+}
+
+.sectionFive__title {
+    padding: 0 10px;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: var(--medium);
+}
+
+.sectionFive__cards--one {
+    background-color: var(--purple);
+}
+
+.sectionFive__cards--two {
+    background-color: var(--blue);
+}
+
+.sectionFive__cards--three {
+    background-color: var(--grey);
+}
+
+.sectionFive__cards--four {
+    background-color: var(--deepGreen);
+}
+
+/* Spotify section */
+.spotify {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spotify__header {
+    margin-top: 100px;
+    font-size: 24px;
+    font-weight: var(--medium);
+    margin-bottom: 30px;
+}
+
+iframe {
+    width: 70%;
+}
+
+/* Endless scroll animation */
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.scroll-container {
+    padding: 30px;
+    flex-direction: column;
+    /* transform: rotate(3deg); */
+    background-color: var(--lightGrey);
+    width: 99vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+    height: 100%;
+    display: flex;
+}
+
+.scroll-line {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    white-space: nowrap;
+    animation: scroll-left 60s linear infinite;
+}
+
+span {
+    cursor: pointer;
+    color: var(--black);
+    font-weight: var(--medium);
+}
+
+.scroll-line:nth-child(2) {
+    animation: scroll-left 60s linear infinite reverse;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll-container:hover .scroll-line {
+    animation-play-state: paused;
+}
+
+.scroll-line span:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}

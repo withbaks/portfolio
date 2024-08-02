@@ -1,0 +1,306 @@
+/* Universal Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+  --black: #1F1F1F;
+  --white: #ffffff;
+  --green: #A6FB89;
+  --deepGreen: #47B172;
+  --lightGrey: #F1F1F1;
+  --grey: #8F8F8F;
+  --purple: #9796F0;
+  --blue: #77C6D9;
+  --brown: #FFDA72;
+  --orange: #FF764A;
+  --medium: 500;
+  --semibold: 600;
+}
+
+* {
+    color: var(--black);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Style for highlighted text */
+::selection {
+    background-color: var(--black);
+    color: var(--green);
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-selection {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+button {
+  border: none;
+  outline: none;
+  stroke: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
+nav {
+    font-weight: var(--medium);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(44px);
+    -webkit-backdrop-filter: blur(44px);
+    /* border-bottom: 1px solid var(--green); */
+}
+
+.navLeft, .navRight__links {
+    font-size: 14px;
+    font-weight: var(--medium);
+    color: var(--black);
+}
+
+/* Animation Container */
+.container {
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navLeft {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: moveText 4s linear infinite;
+}
+
+/* Animation keyframes */
+@keyframes moveText {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+/* Hide text initially */
+.hideText {
+    display: none;
+}
+
+.navRight {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navRight__buttons {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navRight__buttons--gmail {
+    padding: 5px;
+    padding-right: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: var(--medium);
+    color: var(--black);
+    background-color: var(--lightGrey);
+}
+
+.navRight__buttons--social {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: var(--medium);
+    color: var(--black);
+    background-color: var(--green);
+}
+
+.navRight__buttons--socials .socials {
+    position: absolute;
+    right: 0;
+    top: 42px;
+    opacity: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background-color: var(--black);
+    transition: .3s linear opacity;
+}
+
+.navRight__buttons--socials:hover .socials {
+    opacity: 100%;
+}
+
+/* Copy email */
+.hidden {
+    display: none;
+}
+
+#copiedMessage {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    font-weight: var(--medium);
+    margin-top: 120px;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer__headerText {
+    font-size: 24px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__copywright {
+    font-size: 13px;
+}
+
+/* Ensure the loader covers the entire viewport */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Loader background color */
+    z-index: 9999; /* Make sure loader is above content */
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+/* Style for the content */
+.content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show the content when the loader is hidden */
+.loader.hidden {
+    transform: translateY(0);
+}
+
+.content.visible {
+    opacity: 1;
+}
+
+/* Initial state for elements you want to animate */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(80px); /* Optional: Add a little vertical movement */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State when element is visible */
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* State when element is hidden (in case it's no longer in view) */
+.fade-in-element.hidden {
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+.floatingBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floatingBtn img {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--green);
+}
+
+.floatingBtn .hire {
+    font-size: 14px;
+    font-weight: var(--medium);
+    padding: 14px 18px;
+    background-color: var(--white);
+    border: 1px solid var(--lightGrey);
+    border-radius: 30px;
+}
