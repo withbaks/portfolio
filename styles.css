@@ -329,7 +329,6 @@ footer {
 /* Media query for mobile devices */
 @media only screen and (max-width: 480px) {
     main {
-        margin-top: 200px;
         max-width: 440px;
         padding: 20px;
     }
