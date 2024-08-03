@@ -227,9 +227,8 @@ section.five {
 
 .sectionFive__cards {
     width: 1200px;
-    display: grid;
+    display: flex;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
     overflow: scroll;
 }
 
@@ -282,6 +281,14 @@ section.five {
 
 .sectionFive__cards--four {
     background-color: var(--deepGreen);
+}
+
+.sectionFive__cards--five {
+  background-color: var(--orange);
+}
+
+.sectionFive__cards--six {
+  background-color: var(--black);
 }
 
 /* Spotify section */
