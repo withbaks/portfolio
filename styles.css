@@ -363,4 +363,8 @@ footer {
     .footer__headerText {
         font-size: 18px;
     }
+
+    .floatingBtn img {
+        padding: 20px;
+    }
 }
