@@ -344,10 +344,8 @@ footer {
 
     .navRight__buttons {
         width: 100%;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
-        /* justify-content: space-between; */
+        justify-content: space-between;
     }
 
     .mobileNav__links {

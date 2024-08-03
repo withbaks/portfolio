@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Prevent default action of the link
 
         // Copy email text to clipboard
-        const email = emailText.textContent;
+        const email = "Bakarekorede.me@gmail.com";
         const textArea = document.createElement('textarea');
         textArea.value = email;
         document.body.appendChild(textArea);
