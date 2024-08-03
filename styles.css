@@ -342,13 +342,23 @@ footer {
         display: none;
     }
 
+    .navRight__buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .mobileNav__links {
+        margin-top: 10px;
+        width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
     }
 
     .footer__socials {
         gap: 60px;
+    }
+
+    .footer__headerText {
+        font-size: 18px;
     }
 }
