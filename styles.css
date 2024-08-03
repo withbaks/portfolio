@@ -329,7 +329,7 @@ footer {
 /* Media query for mobile devices */
 @media only screen and (max-width: 480px) {
     main {
-        max-width: 440px;
+        max-width: 92%;
         padding: 20px;
     }
 

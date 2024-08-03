@@ -132,6 +132,10 @@ section.header {
 
 
 /* Section Two */
+section.twoMobile {
+  display: none;
+}
+
 section.two {
     margin-top: 150px;
     margin-bottom: 150px;
@@ -404,17 +408,55 @@ span {
     line-height: 58px;
   }
 
-  .sectionTwo__right--large {
-    font-size: 52px;
+  section.two {
+    display: none;
   }
 
-  .sectionTwo__right--small {
+  section.twoMobile {
+    margin-top: 90px;
+    margin-bottom: 150px;
+    flex-direction: column;
+    display: flex;
+    gap: 40px;
+    align-self: flex-start;
+}
+
+.sectionTwoMobile__left p {
+  font-size: 18px;
+  font-weight: var(--medium);
+}
+
+  .sectionTwoMobile__large {
+    width: 100%;
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .sectionTwoMobile__small {
     font-size: 40px;
+    font-weight: 400;
+    color: var(--grey);
+  }
+
+  section.four {
+    margin-bottom: 0;
+  }
+
+  section.five {
+    width: 100%;
   }
 
   .sectionFive__cards {
-    max-width: 90%;
-    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .visit {
+    width: 270px;
+  }
+
+  .scroll {
+    margin-top: 0;
   }
 
   .spotify {
