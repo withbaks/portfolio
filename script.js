@@ -78,11 +78,42 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(switchText, 4000);
 });
 
-// Function to copy product URL
+// Function to copy email web
 document.addEventListener('DOMContentLoaded', () => {
     const copyEmailButton = document.getElementById('copyEmail');
     const emailText = document.getElementById('emailText');
     const copiedMessage = document.getElementById('copiedMessage');
+    
+    if (!copyEmailButton || !emailText || !copiedMessage) {
+        console.error("Elements not found!");
+        return;
+    }
+
+    copyEmailButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default action of the link
+
+        // Copy email text to clipboard
+        const email = "Bakarekorede.me@gmail.com";
+        const textArea = document.createElement('textarea');
+        textArea.value = email;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        // Display "Copied!" message
+        copiedMessage.classList.remove('hidden');
+        setTimeout(() => {
+            copiedMessage.classList.add('hidden');
+        }, 2000); // Hide message after 2 seconds
+    });
+});
+
+// Function to copy email mobile
+document.addEventListener('DOMContentLoaded', () => {
+    const copyEmailButton = document.getElementById('copyEmailMobile');
+    const emailText = document.getElementById('emailTextMobile');
+    const copiedMessage = document.getElementById('copiedMessageMobile');
     
     if (!copyEmailButton || !emailText || !copiedMessage) {
         console.error("Elements not found!");
