@@ -143,3 +143,39 @@
     border: 5px solid var(--purple);
     border-radius: 30px;
 }
+
+/* Responsive Breakpoints */
+/* Media query for Laptop devices */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+/* Media query for Tablet devices */
+@media only screen and (max-width: 834px) {
+    
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+    .infoContent {
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
+    .infoContent__available--header {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .showcaseText {
+        flex-direction: column;
+    }
+
+    .mobileshowcases {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .showcaseImages3 {
+        flex-direction: column;
+    }
+}
