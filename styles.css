@@ -334,9 +334,10 @@ footer {
     }
 
     .mobileNav {
+        width: 100%;
         padding: 20px 24px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
     }
 
     .webNav {
@@ -345,7 +346,7 @@ footer {
 
     .navRight__buttons {
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
     .mobileNav__links {
