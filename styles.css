@@ -334,6 +334,7 @@ footer {
     }
 
     .mobileNav {
+        padding: 20px 24px;
         display: flex;
         flex-direction: column;
     }
@@ -348,7 +349,7 @@ footer {
     }
 
     .mobileNav__links {
-        padding: 0 10px;
+        padding: 0 5px;
         margin-top: 15px;
         width: 100%;
         display: flex;
