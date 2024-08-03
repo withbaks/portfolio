@@ -160,6 +160,7 @@
     .infoContent {
         margin-bottom: 40px;
         gap: 20px;
+        padding: 0 10px;
     }
 
     .infoContent__available--header {
@@ -172,7 +173,12 @@
         flex-direction: column;
     }
 
+    .showcaseText__right--paragraph {
+        width: 100%;
+    }
+
     .mobileshowcases {
+        gap: 20px;
         grid-template-columns: repeat(1, 1fr);
     }
 
