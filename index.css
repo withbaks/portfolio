@@ -169,12 +169,21 @@
     }
 
     .showcaseText {
+        margin-bottom: 40px;
         gap: 15px;
         flex-direction: column;
     }
 
+    .showcaseText__header {
+        font-size: 20px;
+    }
+
     .showcaseText__right--paragraph {
         width: 100%;
+    }
+
+    .showcaseText__right--rectangle {
+        display: none;
     }
 
     .mobileshowcases {
