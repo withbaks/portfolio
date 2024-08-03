@@ -344,7 +344,9 @@ footer {
 
     .navRight__buttons {
         width: 100%;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        /* justify-content: space-between; */
     }
 
     .mobileNav__links {
