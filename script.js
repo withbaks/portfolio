@@ -44,6 +44,40 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(switchText, 4000);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const text1Mobile = document.getElementById('text1Mobile');
+    const text2Mobile = document.getElementById('text2Mobile');
+    
+    if (!text1Mobile || !text2Mobile) {
+        console.error("Text elements not found!");
+        return;
+    }
+
+    let showText1Mobile = true;
+
+    function switchText() {
+        if (showText1Mobile) {
+            text1Mobile.classList.remove('hideText');
+            text2Mobile.classList.add('hideText');
+            text1Mobile.style.animation = 'moveText 4s linear infinite';
+            text2Mobile.style.animation = 'none';
+        } else {
+            text1Mobile.classList.add('hideText');
+            text2Mobile.classList.remove('hideText');
+            text2Mobile.style.animation = 'moveText 4s linear infinite';
+            text1Mobile.style.animation = 'none';
+        }
+        showText1Mobile = !showText1Mobile;
+    }
+
+    // Initial positioning
+    text1Mobile.classList.add('hideText');
+    text2Mobile.classList.remove('hideText');
+
+    // Switch every 4 seconds to match the animation cycle time
+    setInterval(switchText, 4000);
+});
+
 // Function to copy product URL
 document.addEventListener('DOMContentLoaded', () => {
     const copyEmailButton = document.getElementById('copyEmail');
