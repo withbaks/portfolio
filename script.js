@@ -195,3 +195,39 @@ const paragraph = document.getElementById('typewriter');
     }
 
     type();
+
+// Quiz Section
+function checkAnswer(selectedDesign) {
+    const correctDesign = 'design1'; // This is the correct answer
+
+    // Get the feedback text and design containers
+    const promptText = document.querySelector('#quiz-section > p');
+    const design1Container = document.getElementById('design1');
+    const design2Container = document.getElementById('design2');
+    const design1Feedback = document.createElement('h4');
+    const design2Feedback = document.createElement('h4');
+
+    // Remove existing feedback texts if any
+    design1Container.querySelector('h4')?.remove();
+    design2Container.querySelector('h4')?.remove();
+
+    // Reset container borders and feedback
+    design1Container.style.border = '2px solid var(--lightGrey)';
+    design2Container.style.border = '2px solid var(--lightGrey)';
+
+    if (selectedDesign === correctDesign) {
+        // Correct answer feedback
+        promptText.textContent = 'Design 1 provides a cleaner, simpler sign-in experience by using minimal input fields and a clear call to action.';
+        design1Feedback.textContent = 'Correct!';
+        design1Feedback.style.color = 'green';
+        design1Container.appendChild(design1Feedback);
+        design1Container.style.border = '4px solid green';
+    } else {
+        // Incorrect answer feedback
+        promptText.textContent = 'Design 2 has too many distractions and unclear call-to-action elements.';
+        design2Feedback.textContent = 'Incorrect!';
+        design2Feedback.style.color = 'red';
+        design2Container.appendChild(design2Feedback);
+        design2Container.style.border = '4px solid red';
+    }
+}

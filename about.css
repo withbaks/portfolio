@@ -197,8 +197,8 @@ section.four {
 
 section.four p {
     padding-right: 20px;
-    height: 50vh;
-    overflow: scroll;
+    /* height: 50vh;
+    overflow: scroll; */
 }
 
 section.four p::-webkit-scrollbar {

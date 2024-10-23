@@ -42,7 +42,6 @@ html {
     color: var(--white);
 }
 
-
 a {
   text-decoration: none;
   color: var(--black);
@@ -54,6 +53,10 @@ button {
   stroke: none;
   font-weight: 600;
   cursor: pointer;
+}
+
+img {
+    cursor: pointer;
 }
 
 /* Scrollbar */
@@ -362,7 +365,7 @@ footer {
     }
 
     .footer__headerText {
-        width: 100%;
+        width: 90%;
         font-size: 18px;
         line-height: 32px;
         text-align: center;
