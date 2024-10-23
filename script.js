@@ -201,7 +201,7 @@ function checkAnswer(selectedDesign) {
     const correctDesign = 'design1'; // This is the correct answer
 
     // Get the feedback text and design containers
-    const promptText = document.querySelector('#quiz-section > p');
+    const promptText = document.querySelector('.quiz__paragraph');
     const design1Container = document.getElementById('design1');
     const design2Container = document.getElementById('design2');
     const design1Feedback = document.createElement('h4');
