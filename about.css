@@ -201,12 +201,34 @@ section.four p {
     overflow: scroll; */
 }
 
-section.four p::-webkit-scrollbar {
-    width: 2px;
-  }
+/* Style the summary (dropdown handle) */
+details {
+  width: 1200px;
+}
 
-section.four p span {
-    font-weight: 600;
+summary {
+  font-weight: 500;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--white);
+  border-top: 1px solid #ccc;
+  outline: none;
+}
+
+.summaryBody {
+  margin-left: 10px;
+}
+
+/* Remove default arrow */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::marker {
+  display: none;
 }
 
 .typewriter {
@@ -441,6 +463,10 @@ span {
 
   section.four {
     margin-bottom: 0;
+  }
+
+  details {
+    width: 100%;
   }
 
   section.five {

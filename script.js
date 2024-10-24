@@ -231,3 +231,5 @@ function checkAnswer(selectedDesign) {
         design2Container.style.border = '4px solid red';
     }
 }
+
+// Scroll bar

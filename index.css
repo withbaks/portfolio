@@ -241,6 +241,7 @@ input[type="radio"] {
 
     .showcaseText__right--paragraph {
         width: 100%;
+        font-size: 14px;
     }
 
     .showcaseText__right--rectangle {
@@ -266,12 +267,15 @@ input[type="radio"] {
         gap: 30px;
     }
 
+    /* Quiz Styles */
+
     .quiz__header {
         font-size: 20px;
     }
 
     .quiz__paragraph {
         width: 100%;
+        font-size: 14px;
     }
 
     .design {
