@@ -187,7 +187,7 @@ nav {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    padding: 5px 10px;
+    padding: 7px 10px;
     border-radius: 30px;
     background-color: var(--black);
     transition: .3s linear opacity;
@@ -350,6 +350,16 @@ footer {
     .navRight__buttons {
         width: 100%;
         justify-content: flex-end;
+    }
+
+    .socials {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 10px;
+        border-radius: 30px;
+        background-color: var(--black);
     }
 
     .mobileNav__links {
