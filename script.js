@@ -198,38 +198,40 @@ const paragraph = document.getElementById('typewriter');
 
 // Quiz Section
 function checkAnswer(selectedDesign) {
-    const correctDesign = 'design1'; // This is the correct answer
+    const correctDesign = 'design1'; // Correct answer
 
-    // Get the feedback text and design containers
-    const promptText = document.querySelector('.quiz__paragraph');
+    // Get design containers and feedback elements
     const design1Container = document.getElementById('design1');
     const design2Container = document.getElementById('design2');
-    const design1Feedback = document.createElement('h4');
-    const design2Feedback = document.createElement('h4');
+    const design1Radio = design1Container.querySelector('input[type="radio"]');
+    const design2Radio = design2Container.querySelector('input[type="radio"]');
+    
+    // Feedback containers for toggling display
+    const design1Feedback = document.createElement('div');
+    const design2Feedback = document.createElement('div');
+    design1Feedback.className = 'feedback';
+    design2Feedback.className = 'feedback';
 
-    // Remove existing feedback texts if any
-    design1Container.querySelector('h4')?.remove();
-    design2Container.querySelector('h4')?.remove();
-
-    // Reset container borders and feedback
+    // Clear previous feedback
+    design1Container.querySelector('.feedback')?.remove();
+    design2Container.querySelector('.feedback')?.remove();
+    
+    // Reset all borders and radio buttons
     design1Container.style.border = '2px solid var(--lightGrey)';
     design2Container.style.border = '2px solid var(--lightGrey)';
+    design1Radio.checked = false;
+    design2Radio.checked = false;
 
+    // Display feedback based on selection
     if (selectedDesign === correctDesign) {
-        // Correct answer feedback
-        promptText.textContent = 'Design 1 provides a cleaner, simpler sign-in experience by using minimal input fields and a clear call to action.';
-        design1Feedback.textContent = 'Correct!';
-        design1Feedback.style.color = 'green';
-        design1Container.appendChild(design1Feedback);
+        design1Feedback.innerHTML = `<span class="correct">Correct!</span><br><span class="explanation">Design 1 provides a cleaner, simpler sign-in experience by using minimal input fields and a clear call to action.</span>`;
         design1Container.style.border = '4px solid green';
+        design1Radio.checked = true;
+        design1Container.appendChild(design1Feedback);
     } else {
-        // Incorrect answer feedback
-        promptText.textContent = 'Design 2 has too many distractions and unclear call-to-action elements.';
-        design2Feedback.textContent = 'Incorrect!';
-        design2Feedback.style.color = 'red';
-        design2Container.appendChild(design2Feedback);
+        design2Feedback.innerHTML = `<span class="incorrect">Incorrect!</span><br><span class="explanation">Design 2 has too many distractions and unclear call-to-action elements.</span>`;
         design2Container.style.border = '4px solid red';
+        design2Radio.checked = true;
+        design2Container.appendChild(design2Feedback);
     }
 }
-
-// Scroll bar
