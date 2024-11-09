@@ -203,12 +203,12 @@
     width: 50%;
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--lightGrey);
+    background-color: #FBF6F7;
     transition: border 0.3s ease;
 }
 
 .design:hover {
-    background-color: #ecebeb;
+    background-color: #f6edef;
 }
 
 .design img {
@@ -239,8 +239,11 @@ input[type="radio"] {
     color: #3a3a3a;
     display: block;
     margin-top: 5px;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 22px;
+    font-weight: 500;
+    letter-spacing: 8%;
 }
 
 /* Responsive Breakpoints */

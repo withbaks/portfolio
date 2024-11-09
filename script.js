@@ -224,12 +224,12 @@ function checkAnswer(selectedDesign) {
 
     // Display feedback based on selection
     if (selectedDesign === correctDesign) {
-        design1Feedback.innerHTML = `<span class="correct">Correct!</span><br><span class="explanation">Design 1 provides a cleaner, simpler sign-in experience by using minimal input fields and a clear call to action.</span>`;
+        design1Feedback.innerHTML = `<span class="correct">Correct!</span><br><span class="explanation">Clear labels, a straightforward warning, and color-coded buttons make this design easy to understand and act on.</span>`;
         design1Container.style.border = '4px solid green';
         design1Radio.checked = true;
         design1Container.appendChild(design1Feedback);
     } else {
-        design2Feedback.innerHTML = `<span class="incorrect">Incorrect!</span><br><span class="explanation">Design 2 has too many distractions and unclear call-to-action elements.</span>`;
+        design2Feedback.innerHTML = `<span class="incorrect">Incorrect!</span><br><span class="explanation">Ambiguous wording, redundant text, and unclear button labels may confuse users and slow decision-making.</span>`;
         design2Container.style.border = '4px solid red';
         design2Radio.checked = true;
         design2Container.appendChild(design2Feedback);
