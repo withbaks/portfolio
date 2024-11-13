@@ -104,11 +104,19 @@
     background-color: var(--orange);
 }
 
-.showcaseImage2 img {
-    padding: 40px;
-    border-radius: 12px;
+.showcaseImage2 {
+    padding: 30px;
     width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
     background-color: var(--deepGreen);
+}
+
+.showcaseImage2 img {
+    width: 100%;
 }
 
 .showcaseImageGroup {
@@ -143,6 +151,12 @@
     background-color: var(--white);
     border: 5px solid var(--purple);
     border-radius: 30px;
+}
+
+img.caseStudy__btn {
+    width: 24px;
+    height: auto;
+    padding: 0;
 }
 
 /* Showcase 4 */
@@ -320,8 +334,18 @@ input[type="radio"] {
         margin-bottom: 90px;
     }
 
-    .showcaseImage1 img, .showcaseImage2 img {
+    .showcaseImage1 img, .showcaseImage2 {
         padding: 10px 5px;
+    }
+
+    .showcaseImage2 {
+        gap: 10px;
+    }
+
+    img.caseStudy__btn {
+        width: 24px;
+        height: auto;
+        padding: 0;
     }
 
     .showcaseImages3 {
