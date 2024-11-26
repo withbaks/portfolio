@@ -68,7 +68,6 @@
 .showcase4,
 .showcase5,
 .showcase6,
-.showcase7,
 #quiz-section {
   margin-bottom: 120px;
 }
@@ -104,11 +103,25 @@
   height: 2px;
 }
 
-.showcaseImage1 img {
-  padding: 40px;
-  border-radius: 12px;
+.showcaseImage1 video {
+  border: none;
+  border-radius: 8px;
   width: 100%;
   background-color: var(--orange);
+}
+
+.showcaseImage1 .video-wrapper {
+  padding: 30px;
+  width: 100%; /* Match the video's desired width */
+  border-radius: 12px; /* Add rounded corners */
+  overflow: hidden; /* Ensure content respects border-radius */
+  background-color: var(--orange); /* Optional background color */
+}
+
+.showcaseImage1 video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes any gaps from inline elements */
 }
 
 .showcaseImage2 {
@@ -171,7 +184,7 @@
   gap: 5px;
   align-items: center;
   background-color: var(--white);
-  border: 5px solid var(--purple);
+  border: 5px solid #dddddd;
   border-radius: 30px;
   transition: 0.3s linear gap;
 }
@@ -185,7 +198,7 @@
   gap: 5px;
   align-items: center;
   background-color: var(--white);
-  border: 5px solid #000000;
+  border: 5px solid #dddddd;
   border-radius: 30px;
   transition: 0.3s linear gap;
 }
@@ -332,11 +345,11 @@ input[type="radio"] {
   }
 
   .mobileshowcase img {
-    width: 250px;
+    width: 290px;
   }
 
   .showcaseImages3 img {
-    width: 250px;
+    width: 290px;
   }
 }
 
@@ -380,9 +393,10 @@ input[type="radio"] {
     margin-bottom: 90px;
   }
 
-  .showcaseImage1 img,
+  .showcaseImage1 video,
   .showcaseImage2,
   .healthjourney {
+    border-radius: 8px;
     padding: 15px 10px;
   }
 
@@ -473,7 +487,7 @@ input[type="radio"] {
     margin-bottom: 90px;
   }
 
-  .showcaseImage1 img,
+  .showcaseImage1 video,
   .showcaseImage2,
   .healthjourney {
     padding: 10px 5px;
