@@ -104,14 +104,14 @@
 }
 
 .showcaseImage1 {
-    padding: 30px;
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 12px;
-    background-color: var(--orange);
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: var(--orange);
 }
 
 .showcaseImage1 video {
@@ -133,11 +133,11 @@
 }
 
 .showcaseImage2 video {
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
 
 .healthjourney {
   padding: 30px;
